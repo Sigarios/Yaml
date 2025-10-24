@@ -1,1 +1,10 @@
-
+tests:
+  - name: Check README.md exists
+    command: test -f README.md
+    
+  - name: Check src directory exists
+    command: test -d src
+    
+  - name: Check program output
+    command: cd src && python3 hello.py
+    expected_output: "Hello world"
